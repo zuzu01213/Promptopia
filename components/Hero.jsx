@@ -9,15 +9,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className='hero-container'>
-      <h1 className='head_text text-center '>
+    <div className='hero-container scale-90 sm:scale-100'>
+      <h1 className='head_text text-center custom-border '>
         Discover & Share{' '}
         <br className='max-md:hidden' />
         <span className='orange_gradient text-center'>
           AI-Powered Prompts
         </span>
       </h1>
-      <p className='desc text-center secondary'>
+      <p className='desc  secondary'>
         Promptopia is an open-source AI prompting tool for the modern world to discover, 
         create, and share creative prompts
       </p>
