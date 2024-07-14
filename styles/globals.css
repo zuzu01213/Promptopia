@@ -119,8 +119,19 @@
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
+/* Tambahkan gaya ini dalam stylesheet Anda */
+.hero-container.loading {
+  opacity: 0; /* Contoh: Mengatur opasitas untuk menunjukkan pemuatan */
+  pointer-events: none; /* Menonaktifkan interaksi pengguna saat loading */
+  transition: opacity 0.5s ease; /* Tambahkan transisi untuk perubahan opasitas */
+}
+
+.hero-container {
+  opacity: 1; /* Atur opasitas ke 1 setelah loading selesai */
+}
+
 .black_btn {
-  @apply rounded-full  border   border-orange-400 hover:border-black bg-orange-400 py-1.5 px-5 text-black transition-all 
+  @apply rounded-full  border   border-orange-400 hover:border-black bg-orange-400 py-1.5 px-5 text-black  
    hover:bg-black-100 hover:text-orange-400 ease-in-out duration-300 text-center 
    text-sm font-robotoMono flex items-center justify-center;
 }
@@ -128,12 +139,12 @@
 .outline_btn {
   @apply rounded-full border border-gray-600 py-1.5 px-5 
   text-center text-sm font-robotoMono flex items-center bg-white text-black-100
-  justify-center transition-all bg-transparent hover:text-orange-500 hover:shadow-none shadow-[4px_4px_0px_0px_#000];
+  justify-center  bg-transparent hover:text-orange-500 hover:shadow-none shadow-[4px_4px_0px_0px_#000];
 }
 
 
 .head_text {
-  @apply mt-4 text-4xl font-robotoMono font-extrabold leading-[1.25] text-black sm:text-6xl;
+  @apply mt-4 text-5xl font-robotoMono font-extrabold leading-[1.25] text-black sm:text-6xl;
 }
 
 .orange_gradient {
@@ -145,14 +156,14 @@
 }
 
 .blue_gradient {
-  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r font-satoshi from-blue-600 to-cyan-600 bg-clip-text text-transparent font-bold;
 }
 .teal-gradient {
   @apply bg-gradient-to-r from-teal-400 via-teal-500 to-blue-500 bg-clip-text text-transparent;
 }
 
 .desc {
-  @apply mt-5 text-[15px] text-center justify-center flex items-center text-gray-800 sm:text-xl max-w-2xl;
+  @apply my-3 text-[15px]  justify-center flex  text-gray-700 sm:text-xl max-w-2xl;
 }
 
 .search_input {
@@ -162,10 +173,13 @@
 .copy_btn {
   @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
 }
-
-.glassmorphism {
-  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+.shadow {
+  @apply hover:shadow-none shadow-[4px_4px_0px_0px_#000] transition duration-300 ease-in-out
 }
+.glassmorphism {
+  @apply rounded-2xl border border-gray-300 bg-white/30  shadow-[4px_4px_0px_0px_#000] transition duration-300 ease-in-out p-6;
+}
+
 
 .prompt_layout {
   @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
