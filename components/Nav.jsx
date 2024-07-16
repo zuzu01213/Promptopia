@@ -34,7 +34,7 @@ const Nav = () => {
       {/* Desktop Navigation */}
       <div className='sm:flex hidden'>
         {status === "loading" ? (
-          <div>Loading...</div> // Placeholder loading state
+          <div>...</div> // Placeholder loading state
         ) : session?.user ? (
           <div className='flex gap-3 md:gap-5'>
             <Link href="/create-prompt" className="black_btn shadow">
